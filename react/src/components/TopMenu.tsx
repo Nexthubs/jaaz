@@ -46,15 +46,6 @@ export default function TopMenu({
             </motion.span>
           </motion.div>
         </motion.div>
-        <Button
-          variant={window.location.pathname === '/assets' ? 'default' : 'ghost'}
-          size="sm"
-          className={cn('flex items-center font-bold rounded-none')}
-          onClick={() => navigate({ to: '/assets' })}
-        >
-          <ImageIcon className="size-4" />
-          {t('canvas:assets', 'Library')}
-        </Button>
       </div>
 
       <div className="flex items-center gap-2">{middle}</div>
@@ -62,16 +53,8 @@ export default function TopMenu({
       <div className="flex items-center gap-2">
         {right}
         {/* <AgentSettings /> */}
-        <Button
-          size={'sm'}
-          variant="ghost"
-          onClick={() => setShowSettingsDialog(true)}
-        >
-          <SettingsIcon size={30} />
-        </Button>
         <LanguageSwitcher />
         <ThemeButton />
-        <UserMenu />
       </div>
     </motion.div>
   )
